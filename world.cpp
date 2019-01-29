@@ -34,7 +34,7 @@ World::World(int h,int w,int blockSize,sf::RenderWindow *_window){
 
 //	Node::printAllNeighborsData();	
 	setupForSound();
-//	loadSoundsFromFile();
+	loadSoundsFromFile();
 }
 void World::drawWorld(){
 	maze.drawMaze();
