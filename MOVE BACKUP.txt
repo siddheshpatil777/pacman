@@ -1,0 +1,352 @@
+/*
+void Character::move(){
+	//WORKS LIKE BUTTER
+//	printPreviousDirection();
+//	printDirection();
+//	printFutureDirection();
+if((direction=='l' && future_direction=='r')||(direction=='u' && future_direction=='d')||(direction=='r' && future_direction=='l')||(direction=='d' && future_direction=='u')){
+		Node* temp=future_node;
+		future_node=current_node;
+		current_node=temp;
+		direction=future_direction;	
+}
+	if(future_node!=NULL){
+		
+		if(distance(pos,future_node->getPos())<=2.0){
+			pos=future_node->getPos();
+			current_node=future_node;
+			direction=future_direction;
+			future_node=isDirectionValid(direction);
+			if(future_node!=NULL){
+				setVelocityByDirection(direction);
+				updatePositionByVelocity();
+			}
+			else{
+				pos=current_node->getPos();
+				stop();
+			}		
+		}
+		else{
+			setVelocityByDirection(direction);
+			updatePositionByVelocity();
+		}
+	}
+	else if(future_node==NULL){
+		direction='n';
+		if(current_node!=NULL){
+			if(distance(pos,current_node->getPos())<=6.0){
+				stop();
+				pos=current_node->getPos();
+				future_node=isDirectionValid(future_direction);
+				if(future_node!=NULL){
+					direction=future_direction;
+					setVelocityByDirection(direction);
+					updatePositionByVelocity();
+				}
+				else{
+					if(direction==future_direction){
+						pos=current_node->getPos();
+						stop();
+					//	cout<<"reached required else if"<<"\n";
+					//	direction=getPreviousDirection();
+					//	setVelocityByDirection(direction);
+					//	future_node=isDirectionValid(direction);
+					///	updatePositionByVelocity();
+					}
+					else{
+					//	cout<<"reached required else else"<<"\n";
+						
+						direction=getPreviousDirection();
+						setVelocityByDirection(direction);
+						future_node=isDirectionValid(direction);
+						updatePositionByVelocity();
+						if(direction==future_direction){
+							pos=current_node->getPos();
+							stop();
+						}
+						//pos=current_node->getPos();
+					}
+				}
+			}
+		}
+		else{
+			
+		}
+	
+	}
+	
+	positionListUpdate(pos);
+	if(future_node!=NULL){
+		directionListUpdate();
+	}
+//	cout<<sf::Keyboard::Right<<"\n";
+//	pos=getPreviousPosition();
+//	direction=getPreviousDirection();
+//	printPosition(pos);
+	
+	if(current_node!=NULL){
+		cout<<"current_node "<<current_node->getId()<<"\n";
+	}
+	else{
+		cout<<"current_node NULL"<<"\n";
+	}
+	if(future_node!=NULL){
+		cout<<"future_node "<<future_node->getId()<<"\n";
+	}
+	else{
+		cout<<"future_node NULL"<<"\n";
+	}
+	
+}
+*/
+/*
+void Character::move(){
+	//WORKS LIKE BUTTER
+	printPreviousDirection();
+	printDirection();
+	printFutureDirection();
+	if(future_node!=NULL){
+		if(distance(pos,future_node->getPos())<=2.0){
+			pos=future_node->getPos();
+			current_node=future_node;
+			direction=future_direction;
+			future_node=isDirectionValid(direction);
+			if(future_node!=NULL){
+				setVelocityByDirection(direction);
+				updatePositionByVelocity();
+			}	
+		}
+		else{
+			setVelocityByDirection(direction);
+			updatePositionByVelocity();
+		}
+	}
+	else if(future_node==NULL){
+		direction='n';
+		if(distance(pos,current_node->getPos())<=6.0){
+			stop();
+			pos=current_node->getPos();
+			future_node=isDirectionValid(future_direction);
+			if(future_node!=NULL){
+				direction=future_direction;
+				setVelocityByDirection(direction);
+				updatePositionByVelocity();
+			}
+			else{
+				direction=getPreviousDirection();
+				setVelocityByDirection(direction);
+				future_node=isDirectionValid(direction);
+				updatePositionByVelocity();
+			}
+		}
+	
+	}
+	
+	positionListUpdate(pos);
+	if(future_node!=NULL){
+		directionListUpdate();
+	}
+	
+//	pos=getPreviousPosition();
+//	direction=getPreviousDirection();
+	printPosition(pos);
+	if(current_node!=NULL){
+		cout<<"current_node "<<current_node->getId()<<"\n";
+	}
+	if(future_node!=NULL){
+		cout<<"future_node "<<future_node->getId()<<"\n";
+	}
+	
+}
+*/
+/*
+This thing funcking works
+void Character::move(){
+	//WORKS LIKE BUTTER
+	printPreviousDirection();
+	printDirection();
+	printFutureDirection();
+	if(future_node!=NULL){
+		if(distance(pos,future_node->getPos())<=2.0){
+			pos=future_node->getPos();
+			current_node=future_node;
+			direction=future_direction;
+			future_node=isDirectionValid(direction);
+			if(future_node!=NULL){
+				setVelocityByDirection(direction);
+				updatePositionByVelocity();
+			}
+			else{
+				pos=current_node->getPos();
+				stop();
+			}		
+		}
+		else{
+			setVelocityByDirection(direction);
+			updatePositionByVelocity();
+		}
+	}
+	else if(future_node==NULL){
+		direction='n';
+		if(distance(pos,current_node->getPos())<=6.0){
+			stop();
+			pos=current_node->getPos();
+			future_node=isDirectionValid(future_direction);
+			if(future_node!=NULL){
+				direction=future_direction;
+				setVelocityByDirection(direction);
+				updatePositionByVelocity();
+			}
+			else{
+				if(direction==future_direction){
+					pos=current_node->getPos();
+					stop();
+					cout<<"reached required else if"<<"\n";
+				//	direction=getPreviousDirection();
+				//	setVelocityByDirection(direction);
+				//	future_node=isDirectionValid(direction);
+				///	updatePositionByVelocity();
+				}
+				else{
+					cout<<"reached required else else"<<"\n";
+					
+					direction=getPreviousDirection();
+					setVelocityByDirection(direction);
+					future_node=isDirectionValid(direction);
+					updatePositionByVelocity();
+					if(direction==future_direction){
+						pos=current_node->getPos();
+						stop();
+					}
+					//pos=current_node->getPos();
+				}
+			}
+		}
+		else{
+			
+		}
+	
+	}
+	
+	positionListUpdate(pos);
+	if(future_node!=NULL){
+		directionListUpdate();
+	}
+//	cout<<sf::Keyboard::Right<<"\n";
+//	pos=getPreviousPosition();
+	direction=getPreviousDirection();
+	printPosition(pos);
+	if(current_node!=NULL){
+		cout<<"current_node "<<current_node->getId()<<"\n";
+	}
+	else{
+		cout<<"current_node NULL"<<"\n";
+	}
+	if(future_node!=NULL){
+		cout<<"future_node "<<future_node->getId()<<"\n";
+	}
+	else{
+		cout<<"future_node NULL"<<"\n";
+	}
+}
+
+*/
+/*
+FUCK YEEEEEAAAAAAAH!!!!!!!!!!!
+void Character::move(){
+	//WORKS LIKE BUTTER
+	printPreviousDirection();
+	printDirection();
+	printFutureDirection();
+	if(future_node!=NULL){
+		if((direction=='l' && future_direction=='r')||(direction=='u' && future_direction=='d')||(direction=='r' && future_direction=='l')||(direction=='d' && future_direction=='u')){
+			future_node=current_node;
+			current_node=NULL;
+			direction=future_direction;
+			
+		}
+		if(distance(pos,future_node->getPos())<=2.0){
+			pos=future_node->getPos();
+			current_node=future_node;
+			direction=future_direction;
+			future_node=isDirectionValid(direction);
+			if(future_node!=NULL){
+				setVelocityByDirection(direction);
+				updatePositionByVelocity();
+			}
+			else{
+				pos=current_node->getPos();
+				stop();
+			}		
+		}
+		else{
+			setVelocityByDirection(direction);
+			updatePositionByVelocity();
+		}
+	}
+	else if(future_node==NULL){
+		direction='n';
+		if(current_node!=NULL){
+			if(distance(pos,current_node->getPos())<=6.0){
+				stop();
+				pos=current_node->getPos();
+				future_node=isDirectionValid(future_direction);
+				if(future_node!=NULL){
+					direction=future_direction;
+					setVelocityByDirection(direction);
+					updatePositionByVelocity();
+				}
+				else{
+					if(direction==future_direction){
+						pos=current_node->getPos();
+						stop();
+					//	cout<<"reached required else if"<<"\n";
+					//	direction=getPreviousDirection();
+					//	setVelocityByDirection(direction);
+					//	future_node=isDirectionValid(direction);
+					///	updatePositionByVelocity();
+					}
+					else{
+					//	cout<<"reached required else else"<<"\n";
+						
+						direction=getPreviousDirection();
+						setVelocityByDirection(direction);
+						future_node=isDirectionValid(direction);
+						updatePositionByVelocity();
+						if(direction==future_direction){
+							pos=current_node->getPos();
+							stop();
+						}
+						//pos=current_node->getPos();
+					}
+				}
+			}
+		}
+		else{
+			
+		}
+	
+	}
+	
+	positionListUpdate(pos);
+	if(future_node!=NULL){
+		directionListUpdate();
+	}
+//	cout<<sf::Keyboard::Right<<"\n";
+//	pos=getPreviousPosition();
+	direction=getPreviousDirection();
+	printPosition(pos);
+	if(current_node!=NULL){
+		cout<<"current_node "<<current_node->getId()<<"\n";
+	}
+	else{
+		cout<<"current_node NULL"<<"\n";
+	}
+	if(future_node!=NULL){
+		cout<<"future_node "<<future_node->getId()<<"\n";
+	}
+	else{
+		cout<<"future_node NULL"<<"\n";
+	}
+}
+*/
