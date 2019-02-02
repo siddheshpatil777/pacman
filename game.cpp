@@ -77,10 +77,10 @@ void Game::gameLoop(){
 	
 		world->drawWorld();
 		//Text::testAllCharacters();
-		world->displayPoints();
+// 		world->displayPoints();
 		Eatable::drawAllEatables();
 	//	Hitbox::drawAllHitboxes();
-		world->displayPoints();
+// 		world->displayPoints();
 		Ghost::drawAllGhosts();
 		Pacman::drawAllPacmans();
 //		option1.draw();
