@@ -6,5 +6,5 @@ Instructions for installation
 2. Download the source code.
 3. Extract the zip.
 4. Open the file named "PACMAN.dev".
-5. Hit F12 to compile the program.
+5. Hit F11 to compile and run the program.
 6. VOILLA Your game is running.
