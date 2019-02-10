@@ -30,7 +30,7 @@ World::World(int h,int w,int blockSize,sf::RenderWindow *_window){
 	//Node::printAllPointData();
 	Path::loadPathsFromFile("data/paths.txt");
 	Node::assignNeighbors();
-	Network::registerBackground(maze.getPointerToMazeTexture());
+//	Network::registerBackground(maze.getPointerToMazeTexture());
 
 //	Node::printAllNeighborsData();	
 	setupForSound();
@@ -95,7 +95,7 @@ void World::loadAllSprites(char *_path){
 	for(int i=0;i<8;i++){
 		for(int j=0;j<14;j++){
 			all_sprites[all_sprites_length].loadFromImage(data,sf::IntRect(tileToRealCoords(j,i,TILE_SIZE),sf::Vector2i(TILE_SIZE,TILE_SIZE)));
-			Network::registerThisTexture(all_sprites[all_sprites_length]);
+//			Network::registerThisTexture(all_sprites[all_sprites_length]);
 		//	sf::Sprite sprite;
 		//	sprite.setPosition(sf::Vector2f(tileToRealCoords(j,i,TILE_SIZE).x,tileToRealCoords(j,i,TILE_SIZE).y));
 		//	sprite.setTexture(all_sprites[all_sprites_length]);

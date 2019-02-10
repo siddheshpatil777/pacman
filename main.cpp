@@ -2,7 +2,7 @@
 #include "game.h"
 #include "network.h"
 int main(){
-	Network::setupEverythingForNetwork();
+//	Network::setupEverythingForNetwork();
     sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "My window");
     window.setActive(false);
     window.setFramerateLimit(30);

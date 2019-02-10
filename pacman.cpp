@@ -67,19 +67,19 @@ void Pacman::draw(){
 	main_sprite.setPosition(pos.x-TILE_SIZE,pos.y-TILE_SIZE);
 	if(direction==UP){
 		main_sprite.setTexture(all_sprites[textures_main[TILE_UP_1+int(switchting_variable)]]);
-		Network::draw(textures_main[TILE_UP_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
+//		Network::draw(textures_main[TILE_UP_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
 	}
 	else if(direction==LEFT){
 		main_sprite.setTexture(all_sprites[textures_main[TILE_LEFT_1+int(switchting_variable)]]);
-		Network::draw(textures_main[TILE_LEFT_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
+//		Network::draw(textures_main[TILE_LEFT_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
 	}
 	else if(direction==RIGHT){
 		main_sprite.setTexture(all_sprites[textures_main[TILE_RIGHT_1+int(switchting_variable)]]);
-		Network::draw(textures_main[TILE_RIGHT_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
+//		Network::draw(textures_main[TILE_RIGHT_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
 	}
 	else if(direction==DOWN){
 		main_sprite.setTexture(all_sprites[textures_main[TILE_DOWN_1+int(switchting_variable)]]);	
-		Network::draw(textures_main[TILE_DOWN_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
+//		Network::draw(textures_main[TILE_DOWN_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
 	}
 	main_sprite.setScale(sf::Vector2f(2.0,2.0));
 	pacman_screen_layer.draw(main_sprite);

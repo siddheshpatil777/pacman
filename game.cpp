@@ -50,7 +50,7 @@ void Game::gameLoop(){
 */
 //	sf::Thread thread_hitbox(&Hitbox::HandleHitboxes);
 	Hitbox::printAllHitboxData();
-	Network::startMainThread();
+//	Network::startMainThread();
 //	Text option1("1234567890",1,sf::Vector2i(10,10));
 //	Array<Text> options(3);
 //	options[0].set("start new game",1,sf::Vector2i(10,10));
@@ -89,7 +89,7 @@ void Game::gameLoop(){
 //		Text::drawTextToScreen("QWERTYUIOP",sf::Vector2i(6,10),0);
 //Text::testAllCharacters();
 		window->display();
-		Network::display();
+//		Network::display();
 		Eatable::updateAllEatables();
 		Pacman::checkCollsionsForAllPacmans();
 		Eatable::checkCollsionsForAllEatables();

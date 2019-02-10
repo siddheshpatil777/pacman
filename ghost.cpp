@@ -56,22 +56,22 @@ void Ghost::draw(){
 	if(direction==UP){
 		//main_sprite.setTexture(*textures_main[0]);
 		main_sprite.setTexture(all_sprites[textures_main[ghost_type*8+TILE_UP_1+int(switchting_variable)]]);
-		Network::draw(textures_main[ghost_type*8+TILE_UP_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
+//		Network::draw(textures_main[ghost_type*8+TILE_UP_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
 	}
 	else if(direction==LEFT){
 	//	main_sprite.setTexture(*textures_main[0]);
 		main_sprite.setTexture(all_sprites[textures_main[ghost_type*8+TILE_LEFT_1+int(switchting_variable)]]);
-		Network::draw(textures_main[ghost_type*8+TILE_LEFT_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
+//		Network::draw(textures_main[ghost_type*8+TILE_LEFT_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
 	}
 	else if(direction==DOWN){
 	//	main_sprite.setTexture(*textures_main[0]);
 		main_sprite.setTexture(all_sprites[textures_main[ghost_type*8+TILE_DOWN_1+int(switchting_variable)]]);
-		Network::draw(textures_main[ghost_type*8+TILE_DOWN_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
+//		Network::draw(textures_main[ghost_type*8+TILE_DOWN_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
 	}
 	else if(direction==RIGHT){
 	//	main_sprite.setTexture(*textures_main[0]);
 		main_sprite.setTexture(all_sprites[textures_main[ghost_type*8+TILE_RIGHT_1+int(switchting_variable)]]);
-		Network::draw(textures_main[ghost_type*8+TILE_RIGHT_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
+//		Network::draw(textures_main[ghost_type*8+TILE_RIGHT_1+int(switchting_variable)],sf::Vector2f(pos.x-TILE_SIZE,pos.y-TILE_SIZE));
 	}
 	
 	main_sprite.setScale(sf::Vector2f(2.0,2.0));
